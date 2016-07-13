@@ -57,6 +57,3 @@ tn.write(b'\x1bP') # F21
 tn.write(b'\x1bQ') # F22
 tn.write(b'\x1b_') # F23
 tn.write(b'\x1b+') # F24
-
-
-
