@@ -1,0 +1,62 @@
+from telnetlib import Telnet
+import time
+
+# Try until connection is established
+con = ''
+while True:
+	if con == '' or con is None:
+	  # Connecting to telnet client ip address.
+		tn = Telnet("ip address", port number)
+		time.sleep(5)
+		# Writing userid and password to telnet session
+		# Data sends to telnet session converted to bytes
+		tn.write(user.encode() + b'\t') 
+		tn.write(password.encode())
+		time.sleep(1)
+		# python 3: Read from telnet session
+		con = tn.read_very_eager().decode('ascii')
+		print ('\n\n\n', con)
+	else:
+		break
+		
+# Important Escape sequence for AS/400
+tn.write(b'\x1b[A') # Up
+tn.write(b'\x1b[B') # Down
+tn.write(b'\x1b[C') # Right
+tn.write(b'\x1b[D') # Left
+tn.write(b'\t') # Tab (Next)
+tn.write(b'\x1b\t') # Shift+tab (Previous)
+tn.write(b'\x08') # Backspace
+tn.write(b'\x7f') # Delete
+tn.write(b'\r') # Enter
+tn.write(b'\x12') # Erase Input
+tn.write(b'\n') # New line
+tn.write(b'\x04') # Page down
+tn.write(b'\x02') # Page Up
+tn.write(b'\x1b1') # F1
+tn.write(b'\x1b2') # F2
+tn.write(b'\x1b3') # F3
+tn.write(b'\x1b4') # F4
+tn.write(b'\x1b5') # F5
+tn.write(b'\x1b6') # F6
+tn.write(b'\x1b7') # F7
+tn.write(b'\x1b8') # F8
+tn.write(b'\x1b9') # F9
+tn.write(b'\x1b0') # F10
+tn.write(b'\x1b-') # F11
+tn.write(b'\x1b=') # F12
+tn.write(b'\x1b!') # F13
+tn.write(b'\x1b@') # F14
+tn.write(b'\x1b#') # F15
+tn.write(b'\x1b$') # F16
+tn.write(b'\x1b%') # F17
+tn.write(b'\x1b^') # F18
+tn.write(b'\x1b&') # F19
+tn.write(b'\x1b*') # F20
+tn.write(b'\x1bP') # F21
+tn.write(b'\x1bQ') # F22
+tn.write(b'\x1b_') # F23
+tn.write(b'\x1b+') # F24
+
+
+
