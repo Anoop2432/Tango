@@ -53,7 +53,7 @@ tn.write(b'\x1b%') # F17
 tn.write(b'\x1b^') # F18
 tn.write(b'\x1b&') # F19
 tn.write(b'\x1b*') # F20
-tn.write(b'\x1bP') # F21
-tn.write(b'\x1bQ') # F22
+tn.write(b'\x1b(') # F21
+tn.write(b'\x1b)') # F22
 tn.write(b'\x1b_') # F23
 tn.write(b'\x1b+') # F24
